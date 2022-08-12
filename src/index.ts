@@ -168,6 +168,12 @@ const transformers: Partial<
 > = {
   // For background color, prepend the "rgb:" string and omit the "#" character
   backgroundColor: (value) => "rgb:" + value.replace("#", ""),
+
+  // Clamp and round quality to int between 1 and 100,
+  quality: (value) =>
+    Math.round(
+      Math.min(100, Math.max(1, Number.parseInt(value, 10)))
+    ).toString(),
 };
 
 /**

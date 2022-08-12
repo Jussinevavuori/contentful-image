@@ -8,10 +8,15 @@
 		"esModuleInterop": true
 	},
 	"include": [
-		"src",
+		"src"
 	],
 	"exclude": [
 		"node_modules",
-		"**/tests/*",
-	]
+		"**/tests/*"
+	],
+	"types": [
+		"@types/jest",
+		"@types/react",
+		"node"
+	],
 }
